@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon-1.png" type="image/x-icon">
+    <title>Школа иностранных языков PROSPECT  School</title>
+    <link rel="stylesheet" href="css/normolize.css" type="text/css">
+    <!-- <link rel="stylesheet" href="bootstrap/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.rtl.min.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.rtl.css" type="text/css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/modal.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/media.css" type="text/css">
+    <link rel="stylesheet" href="css/hover.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="https://kit.fontawesome.com/58473e6ebb.js" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="rectangle.js" type="text/javascript"></script>
+    <script defer src="js/main.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--
+        Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
+        Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+
+    <!--
+        Основная библиотека JQuery.
+        Яндекс предоставляет хостинг JavaScript-библиотек
+    -->
+    <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+
+    <!-- Библиотека JQuery.UI. Используем для работы со вкладками -->
+    <script src="https://yandex.st/jquery-ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+
+    <!-- CSS JQuery.UI. Используем для отрисовки вкладок -->
+    <link rel="stylesheet" href="https://yandex.st/jquery-ui/1.8.23/themes/humanity/jquery.ui.all.min.css" type="text/css"/>
+
+    <script src="hiddendiv.js" type="text/javascript"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container-xxl container-xl container-lg container-md container-sm">
+            <div class="row">
+                <div class="header__block">
+                    <div class="header__logo">
+                        <a class="header__logo-link" href="index.html">
+                            <div class="header__logo-img">
+                                <img src="images/prosplogo.svg" alt="Логотип компании">
+                            </div>
+                        </a>
+                    </div>
+                    <nav class="header__nav-bar header__nav-bar-desctop header__nav-bar-mobile col-9">
+                        <input id="menu__toggle" type="checkbox">
+                        <label class="menu__btn" for="menu__toggle">
+                            <span></span>
+                        </label>
+                        <ul class="header__nav-list header__menu-box">
+                            <li class="header__nav-item header__menu-item ">
+                                <a class="header__nav-link" href="#prog">Обучение</a>
+                            </li>
+                            <li class="header__nav-item header__menu-item">
+                                <a class="header__nav-link" href="https://niime.ispringlearn.ru/">Тестирование</a>
+                            </li>
+                            <li class="header__nav-item header__menu-item">
+                                <a class="header__nav-link" href="#stock">Акции</a>
+                            </li>
+                            <li class="header__nav-item header__menu-item">
+                                <a class="header__nav-link" href="#cost">Цены</a>
+                            </li>
+                            <li class="header__nav-item header__menu-item">
+                                <a class="header__nav-link" href="#team">Наша команда</a>
+                            </li>
+                            <li class="header__nav-item header__menu-item">
+                                <a class="header__nav-link" href="#contacts">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="header__contacts">
+                            <a class="header__phone" href="tel:+79851430242">+7(985)143 02 42</a>
+                            <button class="btn header__nav-btn btn-success">Записаться</button>
+                        </div>
+                    </nav>
+                    <div class="header__pop-modal">
+                        <div class="header__popup header__popup-close">
+                            <a class="header__close" href="#">
+                                <svg class="header__close-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="21" cy="21" r="19.5" stroke="#fb6402" stroke-width="3"/>
+                                    <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke="#fb6402" stroke-width="3"/>
+                                </svg>                            
+                            </a>
+                            <h2 class="header__modal-head">Мы перезвоним</h2>
+                            <p class="header__modal-description">Оставьте свои контакты или <a class="header__modal-reg" href="#">позвоните нам</a></p>
+                            <form class="header__form" action="mail.php" id="form" autocomplete="off">
+                                <input type="text" class="form__input form-control header__input-form" placeholder="Например, Иван" autocomplete="off" name="user_name" id="name"/>
+                                <input type="number" class="form__input form-control header__input-form" placeholder="+7 (999) 99 99 999" autocomplete="off" name="user_phone" id="phone"/>
+                                <input class="btn btn-primary header__submit" type="submit" value="Отправить" aria-label="Кнопка подтверждение входа"/>
+                              </form>
+                            <div class="header__modal-bottom">
+                                <span class="header__modal-text">Мы в социальных сетях:</span>
+                                <div class="header__social">
+                                    <a class="header__social-link" href="https://vk.com/">
+                                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4"/>
+                                            <path d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
+                                    <a class="header__social-link" href="https://www.google.ru/">
+                                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4"/>
+                                            <path d="M20.9403 11.9923C20.1517 11.2694 18.7687 10.4043 16.7183 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7183 23.4874C18.344 23.4874 19.5815 23.0489 20.5036 22.4208C21.9595 21.4254 22.6146 19.9441 22.7359 18.9605H16.7183V15.0024H26.9701C27.1277 15.666 27.2006 16.3059 27.2006 17.1829C27.2006 20.4299 26.0116 23.1675 23.9491 25.028C22.1414 26.6634 19.6664 27.6115 16.7183 27.6115C12.4477 27.6115 8.75954 25.2176 6.96398 21.7335C6.22395 20.2877 5.79932 18.6642 5.79932 16.9459C5.79932 15.2275 6.22395 13.604 6.96398 12.1582C8.75954 8.67409 12.4477 6.28027 16.7183 6.28027C19.6664 6.28027 22.1293 7.33499 24.0219 9.05333L20.9403 11.9923Z" fill="#121723"/>
+                                        </svg>                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="swiper ">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="images/women-slide.jpg" alt="Изображение слайдера"></div>
+                  <div class="swiper-slide"><img src="images/london-slide.jpg" alt="Изображение слайдера"></div>
+                  <div class="swiper-slide"><img src="images/italian-slider.jpg" alt="Изображение слайдера"></div>
+                </div>
+                <!-- If we need pagination -->
+              
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            <div class="container">
+                <div class="row">
+                    <div class="hero__block col-lg-6 col-md-6 col-md-8 col-sm-10">
+                        <h1 class="hero__heading">Школа иностранных языков Prospect School</h1>
+                        <p class="hero__text">Для эффективного обучения методистами нашей школы был выбран учебник  «English File», входящий в пятерку  лучших учебников английского языка. </p>
+                        <button class="hero__btn btn btn-success">Записаться на бесплатный урок</button>
+                        <button class="hero__btn1 btn">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="language__section">
+            <div class="language">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="language__head">Языки</h2>
+                        <div class="col">
+                            <div class="language_slider_container">
+                                       
+                            <!-- Language Slider -->
+                
+                                <div class="owl-carousel owl-theme language_slider hero__slider">
+
+                                            <!-- Flag -->
+                                    <div class="owl-item language_item">
+                                        <a href="#italian">
+                                            <div class="flag"><img src="images/Italian.svg" alt="Флаг Италии"></div>
+                                            <div class="lang_name">Italian</div>
+                                        </a>
+                                    </div>
+
+                                            <!-- Flag -->
+                                    <div class="owl-item language_item">
+                                        <a href="#english">
+                                            <div class="flag"><img src="images/English.svg" alt="Флаг Англии"></div>
+                                            <div class="lang_name">English</div>
+                                        </a>
+                                    </div>
+
+                                            <!-- Flag -->
+                                    <div class="owl-item language_item">
+                                        <a href="#chinese">
+                                            <div class="flag"><img src="images/Chinese.svg" alt="Флаг Китая"></div>
+                                            <div class="lang_name">Chinese</div>
+                                        </a>
+                                    </div>
+                
+                                            <!-- Flag -->
+                                    <div class="owl-item language_item">
+                                        <a href="#french">
+                                            <div class="flag"><img src="images/French.svg" alt="Флаг Франции"></div>
+                                            <div class="lang_name">French</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- <div class="lang_nav lang_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                                <div class="lang_nav lang_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="learn">
+            <div class="container">
+                <div class="row">
+                   <div class="learn__block">
+                        <h2 class="learn__block-heading heading">Учитесь с носителем языка!</h2>
+                            <div class="learn__block-group">
+                            <div class="learn__block-step">
+                                <a class="learn__link"  href="">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="learn__step-head">Определите свой уровень, цель и формат</h3>
+                                    <p class="learn__text">Вы можете пройти базовый, технический или бизнес-курс, курс подготовки к экзаменам TOEFL, IELTS и др. Мы проводим занятия для всех уровней — от Beginner до Advanced Занимайтесь индивидуально, в группе или в мини-группе</p>
+                                </a>
+                                <button class="learn__btn btn btn-success">Начать</button>
+                            </div>
+                            <div class="learn__block-step">
+                                <a class="learn__link" href="">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <h3 class="learn__step-head">Выберите "своего" преподавателя</h3>
+                                    <p class="learn__text">В ходе собеседования администратор школы подберет квалифицированного преподавателя-носителя языка для изучения английского с учетом ваших пожеланий</p>
+                                </a>
+                                <button class="learn__btn btn btn-success">Начать</button>
+                            </div>
+                            <div class="learn__block-step">
+                                <a class="learn__link" href="">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <h3 class="learn__step-head">Запишитесь на пробный урок</h3>
+                                    <p class="learn__text">На пробном уроке вы познакомитесь с преподавателем и методикой, окончательно определитесь с форматом занятий и подтвердите свой уровень владения языком</p>
+                                </a>
+                                <button class="learn__btn btn btn-success">Начать</button>
+                            </div>
+                            <div class="learn__block-step">
+                                <a class="learn__link" href="">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <h3 class="learn__step-head">Подберите удобное расписание и регулярно занимайтесь</h3>
+                                    <p class="learn__text">С помощью администратора вы подберете удобные дни и время для занятий. Мы стремимся отменять и переносить занятия в исключительных случаях, потому что знаем, что залог успеха в регулярности</p>
+                                </a>
+                                <button class="learn__btn btn btn-success">Начать</button>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section class="trial">
+            <div class="container">
+                <div class="row test">
+                    <div class="trial__group">
+                        <div class="trial__block col-xl-8 col-lg-8 col-md-9">
+                            <h2 class="trial__block-heading heading">Пройдите короткий тест и узнайте свой уровень</h2>
+                            <p class="trial__block-text">Для эффективного обучения методистами нашей школы был выбран учебник  «English File», входящий в пятерку  лучших учебников английского языка. </p>
+                            <a href="https://niime.ispringlearn.ru/" class="trial__btn">Начать</a>
+                        </div>
+                        <div class="trial__block-img">
+                            <img class="trial__img" src="images/test.png" alt="Картинка теста без смысловой нагрузки">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+        <section class="stocks">
+            <div class="container">
+                <div class="row">
+                    <div class="stocks__block">
+                        <h2 id="stock" class="stocks__heading heading">Акции</h2>
+                        <div class="stocks__block-group">
+                            <div class="stocks__column">
+                                <h4 class="stocks__column-head"></h4>
+                                <p class="stocks__column-text"></p>
+                            </div>
+                            <div class="stocks__column">
+                                <h4 class="stocks__column-head"></h4>
+                                <p class="stocks__column-text"></p>
+                            </div>
+                            <div class="stocks__column">
+                                <h4 class="stocks__column-head"></h4>
+                                <p class="stocks__column-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team">
+            <div class="team__container">
+                <div class="container">
+                    <div class="row">
+                        <div class="team__block">
+                            <h2 id="team" class="team__heading heading">Наша команда</h2>
+                            <div class="team__block-group">
+                                <div class="swiper swiper1">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="team__block-card">
+                                                <img class="team__img" src="images/mel.png" alt="Фото преподавателя">
+                                                <div class="team__teacher">
+                                                    <h4 class="team__name">Мэл</h4>
+                                                    <p class="team__description">Общий преподавательский стаж - 15 лет. Ведет базовый, технический и бизнес-курс.</p>
+                                                    <button class="team__link btn" href="">Заниматься с Мелом</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__block-card">
+                                                <img class="team__img" src="images/Фото-Эвана1.jpg" alt="Фото преподавателя">
+                                                <div class="team__teacher">
+                                                    <h4 class="team__name">Эван</h4>
+                                                    <p class="team__description">Ведет взрослые и подростковые группы всех уровней.</p>
+                                                    <button class="team__link btn" href="">Заниматься с Эваном</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__block-card">
+                                                <img class="team__img" src="images/jerry500x500.png" alt="Фото преподавателя">
+                                                <div class="team__teacher">
+                                                    <h4 class="team__name">Джерими</h4>
+                                                    <p class="team__description">Закончил Университет штата Айовы.<br> В США работал учителем в школе.</p>
+                                                    <button class="team__link btn" href="">Заниматься с Джерими</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__block-card">
+                                                <img class="team__img" src="images/dgunF.jpg" alt="Фото преподавателя">
+                                                <div class="team__teacher">
+                                                    <h4 class="team__name">Джун</h4>
+                                                    <p class="team__description"></p>
+                                                    <button class="team__link btn" href="">Заниматься с Джун</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="team__block-card">
+                                                <img class="team__img" src="images/natadm.jpg" alt="Фото преподавателя">
+                                                <div class="team__teacher">
+                                                    <h4 class="team__name">Наталья</h4>
+                                                    <p class="team__description">Поможет выбрать формат, удобное расписание, подходящего преподавателя, запишет на занятия и проконсультирует по всем вопросам обучения в школе</p>
+                                                    <a class="team__link" href="">Записаться</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="swiper-pagination"></div>
+    
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="programs">
+            <div class="container">
+                <div class="row">
+                    <div class="programs__block">
+                        <h2 id="prog" class="programs__heading heading">Программа обучения</h2>
+                        <div class="programs__block-group">
+                            <div class="programs__column">
+                                <img id="italian" class="programs__img" src="images/Italian.svg" alt="Флаг Италии">
+                                <div class="programs__info-block">
+                                    <h4 class="programs__column-head">Итальянский</h4>
+                                    <h5>Базовый курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Новая лексика - 10%<br>Грамматические упражнения - 20%<br>Разговорная практика - 55%</p>
+                                    <h5>Технический или бизнес-курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Тематическая лексика - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <h5>Подготовка к экзаменам:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Пробные тесты - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <a class="programs__link" href="">Начать</a>
+                                </div>
+                            </div>
+                            <div  class="programs__column">
+                                <img id="english" class="programs__img" src="images/English.svg" alt="Флаг Англии">
+                                <div class="programs__info-block">
+                                    <h4 class="programs__column-head">Английский</h4>
+                                    <h5>Базовый курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Новая лексика - 10%<br>Грамматические упражнения - 20%<br>Разговорная практика - 55%</p>
+                                    <h5>Технический или бизнес-курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Тематическая лексика - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <h5>Подготовка к экзаменам:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Пробные тесты - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <a class="programs__link" href="">Начать</a>
+                                </div>
+                            </div>
+                            <div  class="programs__column">
+                                <img id="chinese" class="programs__img" src="images/Chinese.svg" alt="Флаг Китая">
+                                <div class="programs__info-block">
+                                    <h4 class="programs__column-head">Китайский</h4>
+                                    <h5>Базовый курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Новая лексика - 10%<br>Грамматические упражнения - 20%<br>Разговорная практика - 55%</p>
+                                    <h5>Технический или бизнес-курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Тематическая лексика - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <h5>Подготовка к экзаменам:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Пробные тесты - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <a class="programs__link" href="">Начать</a>
+                                </div>
+                            </div>
+                            <div  class="programs__column">
+                                <img id="french" class="programs__img" src="images/French.svg" alt="Флаг Франции">
+                                <div class="programs__info-block">
+                                    <h4 class="programs__column-head">Французский</h4>
+                                    <h5>Базовый курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Новая лексика - 10%<br>Грамматические упражнения - 20%<br>Разговорная практика - 55%</p>
+                                    <h5>Технический или бизнес-курс:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Тематическая лексика - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <h5>Подготовка к экзаменам:</h5>
+                                    <p class="programs__column-text"> Новая грамматика - 15%<br>Общая лексика - 10%<br>Пробные тесты - 20%<br>Грамматические упражнения - 20%<br>Разговорная практика - 35%</p>
+                                    <a class="programs__link" href="">Начать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cost">
+            <div class="container">
+                <div class="row">
+                    <div class="cost__block">
+                        <h2 id="cost" class="cost__heading heading">Стоимость и формат</h2>
+                        <div  class="cost__block-group">
+                            <div class="cost__column">
+                                <h4 class="cost__column-head">Мини</h4>
+                                <p class="cost__column-text">4 - 6 человек с одинаковым уровнем владения английским языком.</p>
+                                <p class="cost__column-text"><strong>(1,5 часа):</strong> 8 занятий - 9200 руб.</p>
+                            </div>
+                            <div class="cost__column">
+                                <h4 class="cost__column-head">Стандартная</h4>
+                                <p class="cost__column-text">7 - 10 человек с одинаковым уровнем владения английским.</p>
+                                <p class="cost__column-text"><strong>(1,5 часа)</strong>: 8 занятий - 8000 руб.</p>
+                            </div>
+                            <div class="cost__column">
+                                <h4 class="cost__column-head">Индивидуальная</h4>
+                                <p class="cost__column-text"> Интенсивный курс.</p>
+                                <p class="cost__column-text"><strong>(45 минут/ 1 час):</strong> Преподаватель носитель языка - 1600 руб./1800 руб. Старший преподаватель носитель языка - 2000 руб./2200 руб.</p>
+                            </div>
+                            <div class="cost__column">
+                                <h4 class="cost__column-head">Корпоративная</h4>
+                                <p class="cost__column-text">Для организованных групп от 4 человек действуют специальные ценовые предложения. Свяжитесь с нашим администратором:<br><a href="tel:+79851430242">+7 (985) 143 0242</a>,<br><a href="mailto:prospectschool@niime.ru">prospectschool@niime.ru</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <h2 id="contacts" class="contact__head heading">Контакты</h2>
+                <div class="contacts">
+                    <div  class="contacts__block">
+                        <address> <a title="address" target="_blank" href="https://yandex.ru/profile/20425659131?no-distribution=1&source=wizbiz_new_map_single">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                             124460, Москва, Зеленоград, ул. Академика Валиева, д.6, стр.6</a></address>
+                        <a href="tel:+79851430242">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            +7 985 143 02 42</a>
+                        <a href="tel:+74952297241">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>+7 (495) 229-7241
+                        </a>
+                            <a class="contacts__email" href="mailto:prospectschool@niime.ru">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512" width="20"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                                prospectschool@niime.ru</a>
+                    </div>
+                    <div class="contact__form">
+                        <form action="send.php" method="POST">
+                            <input type="text" name="name" placeholder="Ваше имя">
+                            <input type="number" name="phone" placeholder="Ваш телефон">
+                            <input type="submit" class="btn" >
+                        </form>
+                        <form action="mail_script.php" method="post">
+
+                            <p>Ваше имя: <input type="text" name="name" /></p>
+                            
+                            <p>Номер телефона: <input type="tel" name="telephone" /></p>
+                            
+                            <p><input type="submit" /></p>
+                            
+                        </form>
+                    </div>
+                    <div id="tabs"  style="width: 95%">
+                        <ul>
+                            <li><a href="#tab-1">Описание</a></li>
+                            <li><a href="#tab-2">Карта</a></li>
+                        </ul>
+                        <div id="tab-1">
+                            <p>Во вкладке Карта находится карта Москвы</p>
+                        </div>
+                        <div id="tab-2" style="width: 100%; height: 300px; padding: 0;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </footer>
+</body>
+</html>
