@@ -37,7 +37,7 @@
     position: relative;
     padding: 59px 59px 0px;
     width: 48.7%;
-    height: 598px;
+    height: 790px;
     top: 79px;
     left: 25.6%;
     z-index: 1000;
@@ -135,7 +135,7 @@
     transition: opacity 0.5s,visibility 1s;
 }
 .header__modal-bottom{
-    width: 203px;
+    width: 238px;
     height: 91px;
 }
 .header__modal-text{

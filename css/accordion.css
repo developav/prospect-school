@@ -1,0 +1,219 @@
+/* Accordion */
+
+
+
+.quests__column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.quests__description{
+    margin-bottom: 20px;
+    padding: 20px 324px 26px 0px;
+}
+.quests__head{
+    margin-bottom: 12px;
+    padding-top: 73px;
+    font-size: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.quests__autor{
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.quests__text{
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    padding-top: 12px;
+    color: #FFFFFF;
+}
+
+.active, .accordion:hover {
+    border-top: 1px solid #AA9DFA;
+    border-bottom: 1px solid #AA9DFA;
+}
+.quests__group{
+    padding: 22px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 25%;
+    margin: 0;
+}
+.quests__group-link{
+    display: block;
+    padding: 2px;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+    transition: all .4s ease-in-out;
+}
+.quests__group-link:hover{
+    color: #AA9DFA;
+}
+
+#accordion {
+    width: 100%;
+    margin: 0px;
+  }
+  #accordion > h3 {
+      position: relative;
+      color: blue;
+      margin: 0;
+      font-size: 20px;
+      border-top: 1px solid #A1A6B4;
+      border-bottom: 1px solid #A1A6B4;
+      padding: 1em 0em 1em 0em;
+      font-weight: normal;
+      color: #ffffff;
+      transition: color 0.3s linear;
+  }
+  #accordion > h3.select__list {
+      border-top: 1px solid #A1A6B4;
+      border-bottom: 1px solid #A1A6B4;
+      font-weight: normal;
+      color: #ffffff;
+  }
+  #accordion > div {
+      height: 0;
+      overflow: hidden;
+      color: #333;
+      transition: height 1s;
+  }
+.quests__tabs-text {
+      font: 12px Arial;
+      text-align: justify;
+}
+.quests__select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quests__selected-list {
+    transition: all 0.3s ease-out;
+}
+.select__list svg {
+    transition: all 0.5s ease-out; 
+    transform: rotate(180deg);
+    transition: all 0.5s ease-out;
+}
+#accordion > h3.select__list{
+    border-top: 1px solid #AA9DFA;
+    border-bottom-color: #AA9DFA;
+}
+.panel {
+    margin: 0px;
+    padding: 27px 0px 23px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 122px;
+    color: #212121;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.panel__tabs{
+    width: 172px;
+}
+
+.panel__tabs:not(:nth-child(13n)) {
+    margin-bottom: 9px;
+}
+.panel__tabs:not(:nth-child(4n)) {
+    margin-right: 17px;
+}
+
+.quests {
+    height: 1108px;
+    background-color: #121723;
+}
+
+.quests__card{
+    display: flex;
+    width: 31.5%;
+    flex-direction: column;
+}
+.quests__card-item{
+    padding-top: 11px;
+}
+
+.quests__card-two{
+    display: none;
+}
+.quests__card-one{
+    display: none;
+}
+.quests__card-active{
+    display: flex;
+}
+.quests__card-social{
+    margin-bottom: 9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 38%;
+}
+.quests__card-head{
+    margin: 0;
+    margin-bottom: 9px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.quests__card-text{
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #A1A6B4;
+}
+
+.quests__card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    height: 34px;
+    border-radius: 77px;
+    border: 2px solid #AA9DFA;
+    background-color: transparent;
+    font-size: 16px;
+    color: #AA9DFA;
+    transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.quests__select:nth-child(1){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/Italian.svg');
+    background-position: top;
+}
+.quests__select:nth-child(3){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/English.svg');
+    background-position: top;
+}
+.quests__select:nth-child(5){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/Chinese.svg');
+    background-position: top;
+}
+.quests__select:nth-child(7){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/French.svg');
+    background-position: top;
+}

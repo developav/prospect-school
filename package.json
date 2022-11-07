@@ -1,0 +1,25 @@
+{
+  "name": "prospect-school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developav/prospect-school.git"
+  },
+  "keywords": [
+    "w"
+  ],
+  "author": "Pavlov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developav/prospect-school/issues"
+  },
+  "homepage": "https://github.com/developav/prospect-school#readme",
+  "dependencies": {
+    "just-validate": "^3.8.1"
+  }
+}

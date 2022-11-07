@@ -99,7 +99,7 @@
     transition: fill 0.3s linear;
 }
 .header__social-link:nth-child(1):hover svg path{
-    fill: #6D31EE;
+    fill: #FFFFFF;
 }
 .header__social-link:hover svg rect{
     fill: #6D31EE;
@@ -185,6 +185,10 @@
     background-color: #0a9191;
     border-color: #0a9191;
     color: black;
+}
+
+.footer__input-form:hover {
+    background-color: #a1a6b4;
 }
 
   
