@@ -150,3 +150,14 @@
     flex-direction: row;
     justify-content: space-around;
 }
+.header__form-private{
+    color: #FFFFFF;
+}
+.header__form-private a{
+    color: #fb6402;
+}
+.header__form-private:hover a{
+    color: #AA9DFA;
+    text-decoration: underline;
+    outline: none;
+}

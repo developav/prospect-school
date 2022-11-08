@@ -59,40 +59,43 @@
 #accordion {
     width: 100%;
     margin: 0px;
+}
+#accordion > h3 {
+    position: relative;
+    color: blue;
+    margin: 0;
+    font-size: 20px;
+    border-top: 1px solid #A1A6B4;
+    border-bottom: 1px solid #A1A6B4;
+    padding: 1em 0.3em 1em 0em;
+    font-weight: normal;
+    color: #fe6702;
+}
+#accordion > h3.select__list {
+    border-top: 1px solid #A1A6B4;
+    border-bottom: 1px solid #A1A6B4;
+    font-weight: normal;
+    color: #ffffff;
   }
-  #accordion > h3 {
-      position: relative;
-      color: blue;
-      margin: 0;
-      font-size: 20px;
-      border-top: 1px solid #A1A6B4;
-      border-bottom: 1px solid #A1A6B4;
-      padding: 1em 0em 1em 0em;
-      font-weight: normal;
-      color: #ffffff;
-      transition: color 0.3s linear;
-  }
-  #accordion > h3.select__list {
-      border-top: 1px solid #A1A6B4;
-      border-bottom: 1px solid #A1A6B4;
-      font-weight: normal;
-      color: #ffffff;
-  }
-  #accordion > div {
-      height: 0;
-      overflow: hidden;
-      color: #333;
-      transition: height 1s;
-  }
+#accordion > div {
+    height: 0;
+    overflow: hidden;
+    color: #333;
+    background: rgb(51 40 54 / 17%);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: height 1s;
+}
 .quests__tabs-text {
-      font: 12px Arial;
-      text-align: justify;
+    display: flex;
+   
 }
 .quests__select {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    transition: all 0.3s linear;
 }
 
 .quests__selected-list {
@@ -113,9 +116,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
-    min-height: 122px;
+    min-height: 290px;
     color: #212121;
     max-height: 0;
     overflow: hidden;
@@ -123,6 +127,12 @@
 }
 .panel__tabs{
     width: 172px;
+}
+
+.panel__block{
+    width: 33%;
+    min-height: 400px;
+    padding: 60px 60px;
 }
 
 .panel__tabs:not(:nth-child(13n)) {

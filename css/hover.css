@@ -191,4 +191,14 @@
     background-color: #a1a6b4;
 }
 
+/* Cost */
+
+
+.quests__select:hover{
+    cursor: pointer;
+    background-position: center;
+    background-size: 20%;
+    opacity: 0.9;
+}
+
   
