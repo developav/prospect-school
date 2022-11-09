@@ -1,11 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Accordion */
 
 
 
 .quests__column{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .quests__description{
     margin-bottom: 20px;
@@ -38,8 +52,13 @@
 }
 .quests__group{
     padding: 22px 0px 0px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 150px;
     width: 25%;
     margin: 0;
@@ -50,6 +69,8 @@
     font-size: 16px;
     color: #ffffff;
     outline: none;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 .quests__group-link:hover{
@@ -84,26 +105,47 @@
     background: rgb(51 40 54 / 17%);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    -webkit-transition: height 1s;
+    -o-transition: height 1s;
     transition: height 1s;
 }
 .quests__tabs-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
    
 }
 .quests__select {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
 .quests__selected-list {
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 .select__list svg {
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out; 
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg); 
+        -ms-transform: rotate(180deg); 
+            transform: rotate(180deg);
     transition: all 0.5s ease-out;
 }
 #accordion > h3.select__list{
@@ -113,16 +155,28 @@
 .panel {
     margin: 0px;
     padding: 27px 0px 23px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 100%;
     min-height: 290px;
     color: #212121;
     max-height: 0;
     overflow: hidden;
+    -webkit-transition: max-height 0.3s ease-out;
+    -o-transition: max-height 0.3s ease-out;
     transition: max-height 0.3s ease-out;
 }
 .panel__tabs{
@@ -148,9 +202,14 @@
 }
 
 .quests__card{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 31.5%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .quests__card-item{
     padding-top: 11px;
@@ -163,13 +222,22 @@
     display: none;
 }
 .quests__card-active{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .quests__card-social{
     margin-bottom: 9px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 38%;
 }
 .quests__card-head{
@@ -190,9 +258,15 @@
 }
 
 .quests__card-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 144px;
     height: 34px;
     border-radius: 77px;
@@ -200,6 +274,8 @@
     background-color: transparent;
     font-size: 16px;
     color: #AA9DFA;
+    -webkit-transition: color 0.3s linear, background-color 0.3s linear;
+    -o-transition: color 0.3s linear, background-color 0.3s linear;
     transition: color 0.3s linear, background-color 0.3s linear;
 }
 
