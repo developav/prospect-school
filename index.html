@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="английский, язык, английский язык, курсы английского, китайский, китайский язык, Курсы, курсы, курсы китайского, курсы английского">
     <link rel="shortcut icon" href="images/favicon-1.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/favicon-1.png">
     <title>Школа иностранных языков PROSPECT  School</title>
     <link rel="stylesheet" href="css/normolize.css" type="text/css">
     <link rel="stylesheet" href="css/normalizeiphone.css" type="text/css">
@@ -64,25 +66,27 @@
                         </ul>
                         <div class="header__contacts">
                             <a class="header__phone" href="tel:+79851430242">+7(985)143 02 42</a>
-                            <button class="btn header__nav-btn btn-success">Записаться</button>
+                            <button class="btn header__nav-btn btn-success" aria-label="Кнопка записи">Записаться</button>
                         </div>
                     </nav>
                     <div class="header__pop-modal">
                         <div class="header__popup header__popup-close">
-                            <a class="header__close" href="#">
+                            <div class="header__popup-head-group">
+                                <h2 class="header__modal-head">Мы перезвоним</h2>
+                                <a class="header__close" href="#">
                                 <svg class="header__close-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="21" cy="21" r="19.5" stroke="#fb6402" stroke-width="3"/>
                                     <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke="#fb6402" stroke-width="3"/>
                                 </svg>                            
-                            </a>
-                            <h2 class="header__modal-head">Мы перезвоним</h2>
-                            <p class="header__modal-description">Оставьте свои контакты или <a class="header__modal-reg" href="#">позвоните нам</a></p>
+                                </a>
+                            </div>
+                            <p class="header__modal-description">Оставьте свои контакты или <a class="header__modal-reg" href="tel:+79851430242">позвоните нам</a></p>
                             <form class="header__form" id="form" action="form-lesson/mail.php" method="POST">
                                 <input type="text" class="header__input-form form__input form-control" autocomplete="off" placeholder="Имя"  name="name" id="name" >
                                 <input type="text" class="header__input-form form__input form-control" autocomplete="off" placeholder="Email" name="phone" id="phone" >
                                 <input type="text" class="header__input-form form__input form-control" autocomplete="off" placeholder="Телефон" name="email" id="email">
-                                <p class="header__form-private" style="margin: 10px; font-size: 75%">Нажимая кнопку «Отправить», я принимаю условия <a class="header__form-link1" href="/docs/Политика.pdf" target="_blank">Политики конфиденциальности</a> и даю своё <a href="docs/Согласие.pdf" target="_blank">согласие на обработку моих персональных данных</a></p>
-                                <button type="submit" id="submit" class="btn btn-primary header__submit">Отправить</button>
+                                <p class="header__form-private" style="margin: 10px; font-size: 75%">Нажимая кнопку «Отправить», я принимаю условия <a class="header__form-link1" href="docs/Политика-и-Согласие.pdf" target="_blank">Политики конфиденциальности</a> и даю своё <a href="docs/Политика-и-Согласие.pdf" target="_blank">согласие на обработку моих персональных данных</a></p>
+                                <button type="submit" id="submit" class="btn btn-primary header__submit" aria-label="Кнопка отправки">Отправить</button>
                               </form>
                             <div class="header__modal-bottom">
                                 <span class="header__modal-text">Мы в социальных сетях:</span>
@@ -350,7 +354,7 @@
                                                 <div class="team__teacher">
                                                     <h4 class="team__name">Жуйюй</h4>
                                                     <p class="team__description">Является членом международной ассоциации преподавателей китайского языка ICLTA.Имею опыт работы репетитором китайского с 2013 года.</p>
-                                                    <button class="team__link btn">Заниматься с Джун</button>
+                                                    <button class="team__link btn">Заниматься с Жуйюй</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -525,13 +529,13 @@
                     </div> 
                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ade56a29277f884f3fdcf04cd084ce1e5383a12dffa02506ff135ac0420b89aa7&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
                     <div class="footer__form-block">
-                        <p class="footer__modal-description header__modal-description">Оставьте свои контакты или <a class="header__modal-reg" href="tel:+79851430242">позвоните нам</a></p>
+                        <p class="footer__modal-description header__modal-description">Оставьте свои контакты или <a class="footer__modal-reg header__modal-reg" href="tel:+79851430242">позвоните нам</a></p>
                         <form class="footer__form header__form row g-3 needs-validation" id="form1" action="form-lesson/mail.php" method="POST" autocomplete="off">
                             <input type="text" class="form__input form-control header__input-form footer__input-form" autocomplete="off" placeholder="Имя"  name="name" id="name" >
                             <input type="text" class="form__input form-control header__input-form footer__input-form" autocomplete="off" placeholder="Email" name="phone" id="phone" >
                             <input type="text" class="form__input form-control header__input-form footer__input-form" autocomplete="off" placeholder="Телефон" name="email" id="email">
                             <input type="submit" id="submit-btn" class="btn btn-primary header__submit">
-                            <p style="margin: 10px; font-size: 75%">Нажимая кнопку «Отправить», я принимаю условия <a href="docs/Политика.pdf" target="_blank">Политики конфиденциальности</a> и даю своё <a href="/docs/Согласие.pdf" target="_blank">согласие на обработку моих персональных данных</a></p>
+                            <p class="footer__form-private" style="margin: 10px; font-size: 75%">Нажимая кнопку «Отправить», я принимаю условия <a class="header__form-link1" href="docs/Политика-и-Согласие.pdf" target="_blank">Политики конфиденциальности</a> и даю своё <a href="docs/Политика-и-Согласие.pdf" target="_blank">согласие на обработку моих персональных данных</a></p>
                             <div id="loader" class="hidden">Отправляем...</div>
                           </form>
                         <div class="footer__modal-bottom header__modal-bottom">

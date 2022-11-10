@@ -303,3 +303,6 @@
     background-image: url('/images/French.svg');
     background-position: top;
 }
+.panel__block-time{
+    padding-bottom: 40px;
+}

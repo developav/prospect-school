@@ -215,5 +215,20 @@
      background-size: 20%;
      opacity: 0.9;
  }
+
+.footer__modal-reg:hover{
+    color: #AA9DFA;
+    text-decoration: underline;
+    outline: none;
+}
+.footer__modal-reg:focus{
+    color: #ffffff;
+    outline: none;
+}
+.footer__modal-reg:active{
+    color: #4F28A5;
+    text-decoration: underline;
+    background-color: transparent;
+}
  
    

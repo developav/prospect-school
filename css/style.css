@@ -8,19 +8,19 @@
 
 @font-face {
 	font-family: "Calibri-Light";
-    src: url("fonts/Calibri-Light.woff2") format("woff2");
-    src: url("fonts/Calibri-Light.woff") format("woff");
+    src: url("../fonts/Calibri-Light.woff2") format("woff2");
+    src: url("../fonts/Calibri-Light.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 @font-face {
 	font-family: "Calibri-Bold";
-    src: url("fonts/Calibri-Bold.woff2") format("woff2");
-    src: url("fonts/Calibri-Bold.woff") format("woff");
+    src: url("../fonts/Calibri-Bold.woff2") format("woff2");
+    src: url("../fonts/Calibri-Bold.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 /* Description */
@@ -42,7 +42,6 @@ body {
     font-size: 16px;
     font-family: "Calibri-Light", sans-serif; 
 }
-
 li{
     list-style-type: none;
 }
@@ -58,7 +57,6 @@ a{
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
-
 .swiper{
     margin: 0 auto;
     max-width: 100%;
@@ -307,6 +305,10 @@ a{
 
 /* 3. language-block */
 
+.language{
+    background-color:#dbf4f5;
+}
+
 .language__section{
     width: 100%;
 	padding-top: 50px;
@@ -393,8 +395,8 @@ a{
   margin-right: 40px;
   width: 34%;
   border-top-right-radius: 30px;
-  border-top-left-radius: 168px;
-  border-bottom-right-radius: 100px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 0px;
 }
 .tabs__img-adm{
   width: 40%;
@@ -421,7 +423,7 @@ a{
       flex-wrap: wrap;
   border: 1px solid #fe6702;
   border-top-right-radius: 30px;
-  border-top-left-radius: 168px;
+  border-top-left-radius: 30px;
   border-bottom-right-radius: 100px;
 }
 .tabs__nav {
@@ -446,7 +448,7 @@ a{
           flex-grow: 1;
   height: 50px;
   font-size: 14px;
-  border: 1px solid #fe6702;
+  border: 1px solid #dbf4f5;
   border-top-right-radius: 30px;
   border-top-left-radius: 168px;
   border-bottom-right-radius: 100px;
@@ -463,6 +465,7 @@ a{
 	        transform: translateY(-10px);
 	-webkit-box-shadow: 0px 5px 15px #bd0034;
 	        box-shadow: 0px 5px 15px #bd0034;
+            border: 1px solid #fe6702;
   height: 60px;
   background: #fe6702;
   color: #fff;
@@ -470,6 +473,9 @@ a{
 }
 
 .tabs__btn:not(.tabs__btn_active):hover{
+    background-color: #ffffff;
+    color: #fe6702;
+    border: 1px solid #fe6702;
   -webkig-transform: translateY(-10px);
 	-ms-transform: translateY(-10px);
 	-webkit-transform: translateY(-10px);
@@ -596,6 +602,10 @@ a{
 }
 
 /* 5. Trial */
+
+.trial{
+    background-color:#dbf4f5;
+}
 
 .trial__block{
     padding: 20px 20px;
@@ -728,7 +738,7 @@ a{
 /* 7. Team */
 
 .team{
-    padding-bottom: 60px;
+   padding: 30px 0 60px 0;
 }
 .team__container{
     position: relative;
@@ -837,7 +847,7 @@ a{
     height: -moz-fit-content;
     height: fit-content;
     padding: 10px 0 80px 0;
-    background: rgb(219 244 245);
+    background: #ffffff;
 }
 .footer__modal-head {
     margin-bottom: 18px;
