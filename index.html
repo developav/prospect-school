@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="английский, язык, английский язык, курсы английского, китайский, китайский язык, Курсы, курсы, курсы китайского, курсы английского">
+    <meta name="yandex-verification" content="97a112de54e65060" />
     <link rel="shortcut icon" href="images/favicon-1.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon-1.png">
     <title>Школа иностранных языков PROSPECT  School</title>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/modal.css" type="text/css">
     <link rel="stylesheet" href="css/accordion.css" type="text/css">
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
     <link rel="stylesheet" href="css/hover.css" type="text/css">
@@ -25,6 +27,7 @@
     <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=975d9143-1f55-4194-baee-a952b13e819d"></script>
    
     <!-- <script defer src="restrict_map_area.js"></script> -->
+    <script defer src="js/slider.js"></script>
     <script type="module" src="js/main.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -130,26 +133,56 @@
     </header>
     <main class="main">
         <section class="hero">
-            <div class="swiper ">
-                <!-- Additional required wrapper -->
+            <div class="slider" data-slider="itc-slider" data-loop="true" data-autoplay="true" data-interval="5000">
+                <div class="slider__container">
+                  <div class="slider__wrapper">
+                    <div class="slider__items">
+                      <div class="slider__item">
+                        <div class="slider__item-container">
+                          <div class="slider__item-content"><img src="images/women-slide.jpg" alt="Изображение слайдера"></div>
+                        </div>
+                      </div>
+                      <div class="slider__item">
+                        <div class="slider__item-container">
+                          <div class="slider__item-content"><img src="images/london-slide.jpg" alt="Изображение слайдера"></div>
+                        </div>
+                      </div>
+                      <div class="slider__item">
+                        <div class="slider__item-container">
+                          <div class="slider__item-content"><img src="images/italian-slider.jpg" alt="Изображение слайдера"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="slider__control" data-slide="prev"></a>
+                <a href="#" class="slider__control" data-slide="next"></a>
+                <ol class="slider__indicators">
+                  <li data-slide-to="0"></li>
+                  <li data-slide-to="1"></li>
+                  <li data-slide-to="2"></li>
+                 
+                </ol>
+              </div>
+            <!-- <div class="swiper ">
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
+                   Slides
                   <div class="swiper-slide"><img src="images/women-slide.jpg" alt="Изображение слайдера"></div>
                   <div class="swiper-slide"><img src="images/london-slide.jpg" alt="Изображение слайдера"></div>
                   <div class="swiper-slide"><img src="images/italian-slider.jpg" alt="Изображение слайдера"></div>
                 </div>
-                <!-- If we need pagination -->
+             If we need pagination
               
               
-                <!-- If we need navigation buttons -->
+                 If we need navigation buttons
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-              </div>
+              </div> -->
             <div class="container">
                 <div class="row">
                     <div class="hero__block col-lg-7 col-md-6 col-md-8 col-sm-10">
                         <h1 class="hero__heading">Школа иностранных языков Prospect School</h1>
-                        <p class="hero__text">Для эффективного обучения методистами нашей школы был выбран учебник  «English File», входящий в пятерку  лучших учебников английского языка. </p>
+                        <!-- <p class="hero__text">Для эффективного обучения методистами нашей школы был выбран учебник  «English File», входящий в пятерку  лучших учебников английского языка. </p> -->
                         <button class="hero__btn btn btn-success">Записаться на бесплатный урок</button>
                         <button class="hero__btn1 btn">Записаться</button>
                     </div>
@@ -308,7 +341,7 @@
                     <div class="trial__group">
                         <div class="trial__block col-xl-8 col-lg-8 col-md-9">
                             <h2 class="trial__block-heading heading">Пройдите короткий тест и узнайте свой уровень</h2>
-                            <p class="trial__block-text">Для эффективного обучения методистами нашей школы был выбран учебник  «English File», входящий в пятерку  лучших учебников английского языка. </p>
+                            <!-- <p class="trial__block-text">Для эффективного обучения методистами нашей школы был выбран учебник  «English File», входящий в пятерку  лучших учебников английского языка. </p> -->
                             <a href="https://niime.ispringlearn.ru/" class="trial__btn">Начать</a>
                         </div>
                         <div class="trial__block-img">
