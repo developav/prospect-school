@@ -7,8 +7,9 @@ $mail->CharSet = 'utf-8';
 
 
 $name = $_POST['name'];
-$phone = $_POST['phone'];
 $email = $_POST['email'];
+$phone = $_POST['phone'];
+
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -21,7 +22,7 @@ $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, 
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('mail@cb90059.tmweb.ru'); // от кого будет уходить письмо?
-$mail->addAddress('prospectschool@niime.ru');     // Кому будет уходить письмо 
+$mail->addAddress('developavlov@yandex.ru');     // Кому будет уходить письмо 
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');

@@ -255,7 +255,9 @@ a{
     z-index: 1;
 }
 .hero__btn{
-    padding: 50px 50px;
+    font-size: 20px;
+    padding: 25px 25px;
+    border-radius: 30px;
 }
 
 .hero__heading{
@@ -451,13 +453,15 @@ a{
   height: 50px;
   font-size: 14px;
   border: 1px solid #dbf4f5;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 168px;
-  border-bottom-right-radius: 100px;
+  border-radius: 30px;
   cursor: pointer;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+
+.tabs__heading-news{
+    padding: 20px 0;
 }
 
 .tabs__btn_active {
@@ -931,5 +935,10 @@ a{
 
 iframe {
     border: 0;
+    width: 100%;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -40px;
+    left: 0;
     width: 100%;
 }

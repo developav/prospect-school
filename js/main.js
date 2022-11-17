@@ -1,4 +1,4 @@
-// import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
+import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
 
 
 //Popup container 
@@ -33,35 +33,7 @@ let phoneNum = document.getElementById('#phone');
 let email = document.getElementById('#email');
 let form = document.getElementById('#form');
 
-
-const swiper1 = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-  autoplay: {
-    delay: 5000,
-  },
-});
-
-
-const swiper = new Swiper('.swiper1', {
+const swiper = new Swiper('.swiper', {
     slidesPerView: 4,
     spaceBetween: 50,
     direction: 'horizontal',
@@ -144,79 +116,111 @@ function showText(textEl) {
   textEl.style.height = textEl.scrollHeight + 'px';
 }
 
-//   VALIDATION
+  // VALIDATION
 
-//   const validation = new JustValidate(
-//     '#form',
-//     {
-//       errorFieldCssClass: 'is-invalid',
-//       errorFieldStyle: {
-//         border: '1px solid red',
-//       },
-//       errorLabelCssClass: 'is-label-invalid',
-//       errorLabelStyle: {
-//         color: 'red',
-//         textDecoration: 'underlined',
-//       },
-//       focusInvalidField: true,
-//       lockForm: true,
-//       tooltip: {
-//         position: 'top',
-//       },
-//       errorsContainer: '.errors-container',
-//     },
-//     [
-//       {
-//         key: 'Name is too short',
-//         dict: {
-//           ru: 'Имя слишком короткое',
-//           es: 'El nombre es muy corto',
-//         },
-//       },
-//       {
-//         key: 'Field is required',
-//         dict: {
-//           ru: 'Обязательное поле',
-//           es: 'Se requiere campo',
-//         },
-//       },
-//     ]
-//   );
+  const validation = new JustValidate(
+    '#form','#form1',
+    {
+      errorFieldCssClass: 'is-invalid',
+      errorFieldStyle: {
+        border: '1px solid red',
+      },
+      errorLabelCssClass: 'is-label-invalid',
+      errorLabelStyle: {
+        color: 'red',
+        textDecoration: 'underlined',
+      },
+      focusInvalidField: true,
+      lockForm: true,
+      tooltip: {
+        position: 'top',
+      },
+      errorsContainer: '.errors-container',
+    },
+    [
+      {
+        key: 'Name is too short',
+        dict: {
+          ru: 'Имя слишком короткое',
+          es: 'El nombre es muy corto',
+        },
+      },
+      {
+        key: 'Field is required',
+        dict: {
+          ru: 'Обязательное поле',
+          es: 'Se requiere campo',
+        },
+      },
+    ]
+  );
 
-//   validation
-//   .addField('#name', [
-//     {
-//       rule: 'required'
-//     },
-//     {
-//       rule: 'minLength',
-//       value: 3,
-//     },
-//     {
-//       rule: 'maxLength',
-//       value: 30,
-//     },
-//   ])
-//   .addField('#email', [
-//     {
-//       rule: 'required',
-//       errorMessage: 'Email is required',
-//     },
-//     {
-//       rule: 'email',
-//       errorMessage: 'Email is invalid!',
-//     },
-//   ])
-//   .addField('#flexCheckDefault', [
-//     {
-//       rule: 'required',
-//     },
-//   ])
+  validation
+  .addField('#name', [
+    {
+      rule: 'required'
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+      errorMessage: 'Email is required',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Email is invalid!',
+    },
+  ])
 
    
-//   .onSuccess((event)=>{
-//  
-//  })
+  .onSuccess((validation) => {
+
+    const form = document.getElementById('form');
+    form.addEventListener('submit', formsend);
+
+    async function formsend(e) {
+      e.preventDefault();
+      let response = await fetch('../form-lesson/mail.php', {
+      method: 'POST',
+    });
+    console.log(response);
+    if(response.ok){
+      let result = await response.json();
+      alert(result.message);
+      formPreviev.innerHTML = '';
+      form.reset();
+      form.classList.remove('_sending');
+    } else {
+      alert("Ошибка");
+      form.classList.remove('_sending');
+    }
+  }
+
+
+  //   const form = document.getElementById('form');
+  //   form.addEventListener('submit', formsend);
+
+  //   async function formsend(e) {
+  //     e.preventDefault();
+  //     let error = formValidate(form);
+
+  //     let formData = new FormData(form);
+  //     formData.append('image', formImage.files[0]);
+
+  //     if (error === 0) {
+  //       form.classList.add('_sending');
+       
+  //     }
+  //   }
+  })
    
   
 
