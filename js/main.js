@@ -116,111 +116,77 @@ function showText(textEl) {
   textEl.style.height = textEl.scrollHeight + 'px';
 }
 
-  // VALIDATION
+// Validation and send messages to server email
 
-  const validation = new JustValidate(
-    '#form','#form1',
-    {
-      errorFieldCssClass: 'is-invalid',
-      errorFieldStyle: {
-        border: '1px solid red',
-      },
-      errorLabelCssClass: 'is-label-invalid',
-      errorLabelStyle: {
-        color: 'red',
-        textDecoration: 'underlined',
-      },
-      focusInvalidField: true,
-      lockForm: true,
-      tooltip: {
-        position: 'top',
-      },
-      errorsContainer: '.errors-container',
-    },
-    [
-      {
-        key: 'Name is too short',
-        dict: {
-          ru: 'Имя слишком короткое',
-          es: 'El nombre es muy corto',
-        },
-      },
-      {
-        key: 'Field is required',
-        dict: {
-          ru: 'Обязательное поле',
-          es: 'Se requiere campo',
-        },
-      },
-    ]
-  );
+       document.addEventListener('DOMContentLoaded', function(){
+        const form = document.getElementById('form1');
+        form.addEventListener('submit', formSend);
 
-  validation
-  .addField('#name', [
-    {
-      rule: 'required'
-    },
-    {
-      rule: 'minLength',
-      value: 3,
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-  ])
-  .addField('#email', [
-    {
-      rule: 'required',
-      errorMessage: 'Email is required',
-    },
-    {
-      rule: 'email',
-      errorMessage: 'Email is invalid!',
-    },
-  ])
+        async function formSend(e) {
+          e.preventDefault();
+          
+          let error = formValidate(form);
+    
+          let formData = new FormData(form);
+        
+    
+          if (error === 0) {
+              form.classList.add('_sending'); 
+              let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+              });
+              if(response.ok){
+                let result = await response.json();
+                alert(result.message);
+                form.reset();
+                form.classList.remove('_sending');
+              } else {
+                alert("Ошибка");
+                form.classList.remove('_sending');
+              }
+            } 
+            else {
+            
+            }
+          }
 
-   
-  .onSuccess((validation) => {
+        function formValidate(form) {
+          let error = 0;
+          let formReq = document.querySelectorAll('._req');
 
-    const form = document.getElementById('form');
-    form.addEventListener('submit', formsend);
+          for (let index = 0; index < formReq.length; index++){
+            const input = formReq[index];
+            formRemoveError(input);
 
-    async function formsend(e) {
-      e.preventDefault();
-      let response = await fetch('../form-lesson/mail.php', {
-      method: 'POST',
-    });
-    console.log(response);
-    if(response.ok){
-      let result = await response.json();
-      alert(result.message);
-      formPreviev.innerHTML = '';
-      form.reset();
-      form.classList.remove('_sending');
-    } else {
-      alert("Ошибка");
-      form.classList.remove('_sending');
-    }
-  }
+            if(input.classList.contains('_email')){
+              if(emailTest(input)){
+                formAddError(input);
+                error++;
+              }
+            } else {
+              if(input.value === '') {
+                formAddError(input);
+                error++;
+              }
+            }
 
+          }
+          return error;
+        }
+        function formAddError(input) {
+          input.parentElement.classList.add('_error');
+          input.classList.add('_error');
+        }
+        function formRemoveError(input) {
+          input.parentElement.classList.remove('_error');
+          input.classList.remove('_error');
+        }
+        function emailTest(input) {
+          return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+        }
+       });
 
-  //   const form = document.getElementById('form');
-  //   form.addEventListener('submit', formsend);
-
-  //   async function formsend(e) {
-  //     e.preventDefault();
-  //     let error = formValidate(form);
-
-  //     let formData = new FormData(form);
-  //     formData.append('image', formImage.files[0]);
-
-  //     if (error === 0) {
-  //       form.classList.add('_sending');
-       
-  //     }
-  //   }
-  })
    
   
 

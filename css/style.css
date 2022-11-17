@@ -897,6 +897,30 @@ a{
 .footer__form-block{
     width: 50%;
 }
+.form__input._error {
+    box-shadow: 0 0 15px red;
+}
+.footer__form{
+    position: relative;
+}
+.footer__form::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(170, 170, 170, 0.9) url("../images/load.gif") center / 100px no-repeat;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+.footer__form._sending::after{
+    opacity: 1;
+    visibility: visible;
+}
 .footer__modal-description{
     margin-bottom: 29px;
     font-size: 20px;
