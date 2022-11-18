@@ -28,13 +28,6 @@
     height: 750px;
     top: 80px;
     left: 25.8%;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: #121723;
-    border-radius: 0px;
-    border: none;
-    z-index: 100;
   }
   .header__form {
     margin-bottom: 31px;
@@ -147,13 +140,6 @@
     width: 50.9%;
     top: 80px;
     left: 25.8%;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: #121723;
-    border-radius: 0px;
-    border: none;
-    z-index: 100;
   }
   .header__form {
     margin-bottom: 31px;
@@ -328,13 +314,6 @@
     height: 800px;
     top: 80px;
     left: 18.8%;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: #121723;
-    border-radius: 0px;
-    border: none;
-    z-index: 100;
   }
   .header__form {
     margin-bottom: 31px;
@@ -505,6 +484,10 @@
     display: none;
   }
   
+
+  .tabs__btn {
+    margin-bottom: 20px;
+  }
   /* 3. language-block */
   
   .language_item {
@@ -569,6 +552,11 @@
     width: 100%;
     padding-top: 30px;
   }
+
+  iframe {
+    border: 0;
+    width: 100%;
+}
   }
   @media(max-width:760px){
   
@@ -600,13 +588,6 @@
     height: 690px;
     top: 80px;
     left: 12.8%;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: #121723;
-    border-radius: 0px;
-    border: none;
-    z-index: 100;
   }
   .header__form {
     margin-bottom: 31px;
@@ -654,6 +635,8 @@
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
   }
+
+  
   
   /* Trial */
   
@@ -728,13 +711,6 @@
     height: 690px;
     top: 80px;
     left: 12.8%;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: #121723;
-    border-radius: 0px;
-    border: none;
-    z-index: 100;
   }
   .header__form {
     margin-bottom: 31px;
@@ -788,6 +764,9 @@
     
   }
   .hero__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
     position: absolute;
     top: 100px;
@@ -810,6 +789,15 @@
   }
   .slider__control{
     display: none;
+  }
+  .hero__btn{
+    display: none;
+  }
+  .hero__btn1{
+    display: block;
+    padding: 5px 5px;
+    width: 100px;
+    background-color: #fe6702;
   }
   
   /* 3. language-block */
@@ -856,6 +844,7 @@
   
   .tabs__btn {
     padding: 0.5rem 0.75rem;
+    margin-bottom: 20px;
     text-decoration: none;
     color: black;
     text-align: center;
@@ -880,7 +869,7 @@
   /* 5. Trial */
   
   .trial__group {
-    padding: 0px 0 50px 0;
+    padding: 80px 0 0px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -900,10 +889,18 @@
     text-align: center;
   }
   .trial__block-heading {
-    font-size: 50px;
+    font-size: 35px;
     padding: 49px 1px 10px 1px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
+  .trial__btn {
+    color: #dbf4f5;
+    padding: 20px 90px;
+    background-color: #fe6702;
+    border: 1px solid #fe6702;
+    border-radius: 30px;
+    font-size: 30px;
+}
   
   /* 7. Team */
   
@@ -1009,13 +1006,6 @@
     width: 90.9%;
     top: 80px;
     left: 4.8%;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: #121723;
-    border-radius: 0px;
-    border: none;
-    z-index: 100;
   }
   .header__form {
     margin-bottom: 31px;
@@ -1076,15 +1066,7 @@
   .hero__text{
     font-size: 10px;
   }
-  .hero__btn{
-    display: none;
-  }
-  .hero__btn1{
-    display: block;
-    padding: 5px 5px;
-    width: 100px;
-    background-color: #fe6702;
-  }
+  
   .hero__block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1152,6 +1134,10 @@
     -webkit-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
+  }
+
+  .tabs__btn {
+    margin-bottom: 20px;
   }
   
   /* 4. learn-block */

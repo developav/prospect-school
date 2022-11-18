@@ -103,8 +103,9 @@ function change(event) {
   }
 }
 function hideAll() {
-  let h3El = accordion.querySelectorAll('h3');
+  let h3El = accordion.querySelectorAll('h3','svg');
   let divEl = accordion.querySelectorAll('div');
+  let svg = accordion.querySelectorAll('svg')
   for (let i = 0; i < h3El.length; i++) {
     h3El[i].classList.remove('select__list');
   }
@@ -116,7 +117,95 @@ function showText(textEl) {
   textEl.style.height = textEl.scrollHeight + 'px';
 }
 
-// Validation and send messages to server email
+//validate and send messages to server email modal
+
+document.addEventListener('DOMContentLoaded', function(){
+  const forModal = document.getElementById('form');
+  forModal.addEventListener('submit', forModalSend);
+  let button = document.querySelector('.header__nav-btn');
+  let popup = document.querySelector('.header__popup');
+  let closePopup = document.querySelector('.header__close');
+  let modal = document.querySelector('.header__pop-modal');
+  let body = document.getElementsByTagName('body');
+
+
+  async function forModalSend(e){
+    e.preventDefault();
+    let error = forModalValidate(forModal);
+    let formModalData = new FormData(forModal);
+
+    if(error === 0) {
+      forModal.classList.add('_sending');
+      document.body.classList.add('disable-scroll');
+      let response = await fetch('sendmail.php',{
+        method: 'POST',
+        body: formModalData
+      });
+      if(response.ok){
+        let result = await response.json();
+        // alert(result.message);
+        forModal.reset();
+        window.setTimeout(function () {
+          forModal.classList.remove('_sending');
+          document.body.classList.remove('disable-scroll');
+          popup.classList.remove('show__popup');
+          popup.classList.remove('fade');
+          popup.classList.remove('animate-open');
+          modal.classList.remove('is-open');
+          document.body.classList.remove('disable-scroll');
+        }, 1000);
+       
+      } else {
+        // alert("Ошибка");
+        window.setTimeout(function () {
+          forModal.classList.remove('_sending');
+          document.body.classList.remove('disable-scroll');
+        }, 1000);
+      }
+    }
+    else{
+
+    }
+  }
+
+  function forModalValidate(forModal){
+    let error = 0;
+    let formReg = document.querySelectorAll('._reg');
+
+    for (let index = 0; index < formReg.length; index++){
+      const input = formReg[index];
+      forModalRemoveError(input);
+
+      if(input.classList.contains('_emailModal')){
+        if(emailTest(input)){
+          forModalAddError(input);
+          error++;
+        }
+      } else {
+        if(input.value === '') {
+          forModalAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+
+  function forModalAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+  function forModalRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+  function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
+});
+
+
+// Validation and send messages to server email footer
 
        document.addEventListener('DOMContentLoaded', function(){
         const form = document.getElementById('form1');
@@ -132,6 +221,7 @@ function showText(textEl) {
     
           if (error === 0) {
               form.classList.add('_sending'); 
+              document.body.classList.add('disable-scroll');
               let response = await fetch('sendmail.php', {
                 method: 'POST',
                 body: formData
@@ -140,10 +230,19 @@ function showText(textEl) {
                 let result = await response.json();
                 alert(result.message);
                 form.reset();
-                form.classList.remove('_sending');
+                window.setTimeout(function () {
+                  form.classList.remove('_sending');
+                  document.body.classList.remove('disable-scroll');
+                  popup.classList.remove('show__popup');
+                  popup.classList.remove('fade');
+                  popup.classList.remove('animate-open');
+                  modal.classList.remove('is-open');
+                  document.body.classList.remove('disable-scroll');
+                }, 1000);
               } else {
                 alert("Ошибка");
                 form.classList.remove('_sending');
+                document.body.classList.remove('disable-scroll');
               }
             } 
             else {

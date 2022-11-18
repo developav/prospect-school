@@ -53,7 +53,7 @@
     overflow: hidden;
     border: 1px solid #ccc;
     background: #121723;
-    border-radius: 0px;
+    border-radius: 30px;
     border: none;
     z-index: 100;
 }

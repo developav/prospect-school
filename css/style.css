@@ -618,15 +618,16 @@ a{
 }
 .trial__btn{
     color: #dbf4f5;
-    padding: 10px 50px;
+    padding: 20px 90px;
     background-color: #fe6702;
     border: 1px solid #fe6702;
-    border-radius: 15px;
+    border-radius: 30px;
+    font-size: 30px;
 }
 .trial__block-heading{
     font-size: 50px;
     padding: 105px 105px 10px 1px;
-    margin-bottom: 10px;
+    margin-bottom: 70px;
 }
 .trial__block-text{
     margin-bottom: 30px;
@@ -658,7 +659,7 @@ a{
     height: -moz-fit-content;
     height: fit-content;
     padding: 10px 0 80px 0;
-    background-color: #dbf4f5;
+    background-color: #ffffff;
 }
 
 .programs__heading{
@@ -745,6 +746,7 @@ a{
 
 .team{
    padding: 30px 0 60px 0;
+   background-color: #dbf4f5;
 }
 .team__container{
     position: relative;
@@ -799,6 +801,7 @@ a{
     border-radius: 15px;
 }
 .team__description{
+    font-size: 14px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -851,7 +854,7 @@ a{
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 0 80px 0;
+    padding: 10px 0 0px 0;
     background: #ffffff;
 }
 .footer__modal-head {
@@ -862,6 +865,7 @@ a{
     color: #fe6702;
 }
 .contacts {
+    margin-bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -898,10 +902,8 @@ a{
     width: 50%;
 }
 .form__input._error {
+    background-color: rgb(236, 175, 175);
     box-shadow: 0 0 15px red;
-}
-.footer__form{
-    position: relative;
 }
 .footer__form::after{
     content: "";
@@ -949,6 +951,15 @@ a{
 .footer__modal-text{
     color: #fb6402;
 }
+.footer__container {
+    text-align: center;
+    background-color: #fb6402;
+    color: #ffffff;
+}
+.footer__brand{
+    align-items: center;
+    text-align: center;
+}
  #map {
     width: 100%; 
     height: 100%; 
@@ -959,10 +970,28 @@ a{
 
 iframe {
     border: 0;
-    width: 100%;
+    width: 45%;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -40px;
     left: 0;
     width: 100%;
+}
+.header__form::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(170, 170, 170, 0.9) url("../images/load.gif") center / 100px no-repeat;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+.header__form._sending::after{
+    opacity: 1;
+    visibility: visible;
 }
