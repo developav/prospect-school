@@ -1,6 +1,3 @@
-import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
-
-
 //Popup container 
 
 (function(){
@@ -127,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function(){
   let closePopup = document.querySelector('.header__close');
   let modal = document.querySelector('.header__pop-modal');
   let body = document.getElementsByTagName('body');
+  let tooltip = document.querySelector('.header__tooltip');
+
 
 
   async function forModalSend(e){
@@ -143,22 +142,23 @@ document.addEventListener('DOMContentLoaded', function(){
       });
       if(response.ok){
         let result = await response.json();
+        tooltip.classList.add('tooltip-open');
+        window.setTimeout(function () {
+              document.body.classList.remove('disable-scroll');
+              popup.classList.remove('show__popup');
+              popup.classList.remove('fade');
+              popup.classList.remove('animate-open');
+              modal.classList.remove('is-open');
+              forModal.classList.remove('_sending');
+              tooltip.classList.remove('tooltip-open');
+              document.body.classList.remove('disable-scroll');
+              forModal.reset();
+        }, 3000);
         // alert(result.message);
-        forModal.reset();
+       } else {
+        alert("Ошибка");
         window.setTimeout(function () {
-          forModal.classList.remove('_sending');
-          document.body.classList.remove('disable-scroll');
-          popup.classList.remove('show__popup');
-          popup.classList.remove('fade');
-          popup.classList.remove('animate-open');
-          modal.classList.remove('is-open');
-          document.body.classList.remove('disable-scroll');
-        }, 1000);
-       
-      } else {
-        // alert("Ошибка");
-        window.setTimeout(function () {
-          forModal.classList.remove('_sending');
+           forModal.classList.remove('_sending');
           document.body.classList.remove('disable-scroll');
         }, 1000);
       }
@@ -209,6 +209,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
        document.addEventListener('DOMContentLoaded', function(){
         const form = document.getElementById('form1');
+        let tooltip = document.querySelector('.header__tooltip');
         form.addEventListener('submit', formSend);
 
         async function formSend(e) {
@@ -228,17 +229,18 @@ document.addEventListener('DOMContentLoaded', function(){
               });
               if(response.ok){
                 let result = await response.json();
-                alert(result.message);
+                tooltip.classList.add('tooltip-open');
                 form.reset();
                 window.setTimeout(function () {
                   form.classList.remove('_sending');
+                  tooltip.classList.remove('tooltip-open');
                   document.body.classList.remove('disable-scroll');
                   popup.classList.remove('show__popup');
                   popup.classList.remove('fade');
                   popup.classList.remove('animate-open');
                   modal.classList.remove('is-open');
                   document.body.classList.remove('disable-scroll');
-                }, 1000);
+                }, 3000);
               } else {
                 alert("Ошибка");
                 form.classList.remove('_sending');

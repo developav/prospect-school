@@ -469,6 +469,17 @@
     border-radius: 30px;
     background: rgb(51 40 54 / 50%);
   }
+  .header__tooltip h2{
+    width: 100%;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  .header__tooltip p{
+    width: 100%;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+
   .hero__heading {
     margin-bottom: 10px;
     font-size: 35px;
@@ -571,6 +582,16 @@
     border-radius: 30px;
     background: rgb(51 40 54 / 50%);
   }
+.header__tooltip h2{
+  width: 100%;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.header__tooltip p{
+  width: 100%;
+  font-size: 14px;
+  color: #FFFFFF;
+}
   
    /* POPUP */
   
@@ -869,7 +890,6 @@
   /* 5. Trial */
   
   .trial__group {
-    padding: 80px 0 0px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -991,6 +1011,16 @@
     height: 26px;
     cursor: pointer;
     z-index: 1;
+  }
+  .header__tooltip h2{
+    width: 100%;
+    font-size: 25px;
+    color: #FFFFFF;
+  }
+  .header__tooltip p{
+    width: 100%;
+    font-size: 14px;
+    color: #FFFFFF;
   }
   
   /* POPUP */
@@ -1156,7 +1186,7 @@
   .trial__block-heading {
     font-size: 30px;
     padding: 49px 1px 10px 1px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
   }
   .trial__block-img {
     display: none;

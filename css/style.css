@@ -812,7 +812,10 @@ a{
 }
 
 /* 9. cost-block */
-
+.stocks__heading{
+    padding: 50px 105px 10px 1px;
+    margin-bottom: 50px;
+}
 .cost__block-group {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -855,7 +858,7 @@ a{
     height: -moz-fit-content;
     height: fit-content;
     padding: 10px 0 0px 0;
-    background: #ffffff;
+    background: #dbf4f5;
 }
 .footer__modal-head {
     margin-bottom: 18px;
@@ -994,4 +997,12 @@ iframe {
 .header__form._sending::after{
     opacity: 1;
     visibility: visible;
+    z-index: 10;
+}
+
+.badge {
+    max-width: 100%;
+    height: 100vh;
+    padding: 20px 20px 32px;
+    border-radius: 8px;
 }
