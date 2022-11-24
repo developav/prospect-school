@@ -235,11 +235,6 @@ document.addEventListener('DOMContentLoaded', function(){
                   form.classList.remove('_sending');
                   tooltip.classList.remove('tooltip-open');
                   document.body.classList.remove('disable-scroll');
-                  popup.classList.remove('show__popup');
-                  popup.classList.remove('fade');
-                  popup.classList.remove('animate-open');
-                  modal.classList.remove('is-open');
-                  document.body.classList.remove('disable-scroll');
                 }, 3000);
               } else {
                 alert("Ошибка");
