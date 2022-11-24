@@ -1,3 +1,5 @@
+
+ 
 class ItcTabs {
     constructor(target, config) {
       const defaultConfig = {};
@@ -44,4 +46,6 @@ class ItcTabs {
         }
       });
     }
+   
   }
+  const tabs = new ItcTabs('.tabs');
